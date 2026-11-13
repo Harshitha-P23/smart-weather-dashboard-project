@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>🌤️ Smart Weather Dashboard</h1>
+    <p>AI-Powered Weather Monitoring & Forecasting</p>
+</header>
+<main class="container">
+    <section class="search">
+        <input type="text" id="city" placeholder="Enter city name">
+        <button onclick="getWeather()">Search Weather</button>
+        <button onclick="getLocation()">📍 My Location</button>
+    </section>
+    <section class="weather-card">
+        <h2 id="location">Weather Information</h2>
+        <h1 id="temperature">--°C</h1>
+        <h3 id="condition">Search for a city</h3>
+        <div class="details">
+            <div>💧 Humidity: <span id="humidity">--</span></div>
+            <div>💨 Wind: <span id="wind">--</span></div>
+            <div>🌡️ Feels Like: <span id="feels">--</span></div>
+            <div>🌧️ Rain Probability: <span id="rain">--</span></div>
+        </div>
+    </section>
+    <section class="forecast">
+        <h2>📅 Weather Forecast</h2>
+        <div id="forecast"></div>
+    </section>
+    <section class="insights">
+        <h2>🤖 Smart Weather Insights</h2>
+        <p id="insights">Your weather insights will appear here.</p>
+    </section>
+</main>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
